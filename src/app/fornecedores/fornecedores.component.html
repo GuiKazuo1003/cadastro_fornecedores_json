@@ -1,0 +1,59 @@
+<h1 class="text text-center">Tabela de Cadastro de Fornecedor</h1>
+<div class="row">
+    <div class="col-8 m-auto">
+        <form [formGroup]="formGroupFornecedor">
+            <div class="mb-3">
+                <label for="id" class="form-label">Id: </label>
+                <input type="text" formControlName="id" class="form-control" id="id" placeholder="id">
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome: </label>
+                <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nome:">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="active" formControlName="active">
+                <label class="form-check-label" for="active">
+                  Ativo
+                </label>
+              </div>
+              <select class="form-select" aria-label="category" formControlName="category">
+                <option selected disabled>Categoria</option>
+                <option value="Regional">Regional</option>
+                <option value="Nacional">Nacional</option>
+                <option value="Internacional">Internacional</option>
+              </select>
+            <div class="mb-3">
+                <label for="contact" class="form-label">Contato: </label>
+                <input type="number" formControlName="contact" class="form-control" id="contact" placeholder="Telefone ">
+            </div>
+            <div class="mb-3 d-flex justify-content-end">
+                <button type="button" class="btn btn-primary" (click)="save()">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<table class="table container">
+    <thead>
+      <tr class="top">
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Ativo</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Contato</th>
+        <th class="d-flex justify-content-end" scope="col">Opções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Supplier of fornecedores">
+        <th scope="row">{{Supplier.id}}</th>
+        <td>{{Supplier.name}}</td>
+        <td>{{Supplier.active}}</td>
+        <td>{{Supplier.category}}</td>
+        <td>{{Supplier.contact}}</td>
+        <td class="d-flex justify-content-end">
+            <button class="btn btn-danger me-1" (click)="remove(Supplier)">Excluir</button>
+            <button class="btn btn-primary" (click)="edit(Supplier)">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

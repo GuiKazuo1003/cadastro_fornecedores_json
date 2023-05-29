@@ -1,0 +1,32 @@
+{
+  "fornecedores": [
+    {
+      "id": 1,
+      "name": "Roberto Dinamite rosca",
+      "active": true,
+      "category": "Nacional",
+      "contact": 99675623
+    },
+    {
+      "id": 2,
+      "name": "Sergio Fortonelli",
+      "active": false,
+      "category": "Nacional",
+      "contact": 99692623
+    },
+    {
+      "id": "3",
+      "name": "Yuri Kagawa",
+      "active": true,
+      "category": "Internacional",
+      "contact": 9882172312
+    },
+    {
+      "id": "4",
+      "name": "jajajaja",
+      "active": true,
+      "category": "Nacional",
+      "contact": 121313213123
+    }
+  ]
+}
