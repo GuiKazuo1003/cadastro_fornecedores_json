@@ -8,7 +8,7 @@ import { Supplier } from './fornecedor';
 })
 export class FornecedorService {
 
-  url = "http://localhost:3000/fornecedores";
+  url = "http://localhost:8080/fornecedor";
 
   constructor(private http: HttpClient) { }
 
